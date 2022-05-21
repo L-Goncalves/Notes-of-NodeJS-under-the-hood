@@ -88,7 +88,7 @@ Here's what has happened throught the years and the releases:
 <li>New releases</li>
 
 ## Ok but what is NodeJS?
-<p><b>Node.js</b>is defined by Ryan Dahl is a set o libraries that run on top of V8 engine that allows us to run Javascript on the Server-side, basically it lets us run JS outside the browser</p>
+<p><b>Node.js</b> is defined by Ryan Dahl is a set o libraries that run on top of V8 engine that allows us to run Javascript on the Server-side, basically it lets us run JS outside the browser</p>
 
 ## References 
 <br/>
