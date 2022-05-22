@@ -90,6 +90,26 @@ Here's what has happened throught the years and the releases:
 ## Ok but what is NodeJS?
 <p><b>Node.js</b> is defined by Ryan Dahl is a set o libraries that run on top of V8 engine that allows us to run Javascript on the Server-side, basically it lets us run JS outside the browser</p>
 
+## Brief history of Javascript
+Javascript First appeared in December 4, 1995 and it was created by Brendan Eich in just 10 days. The first name of Javascript was originally named Mocha but after a while It became known as Livescript and later Javascript.
+
+### What is Javascript 
+Javascript is a scripting language that is one of the three cores used to develop websites. Javascript lets you add functionality to your website allowing the people that visit the website interact with the content.
+
+Javascript is primarily a client-side language, which means it runs on the front-end primarily. However nowadays it's possible to execute on the server-side with NodeJS.
+
+### ECMAScript was born.
+In 1997 Javascript was growing really fast, it became clear that the language would need to be maintained and managed. So Netscape handed the job of creating a language specification to the European Computer Manufacturers Association (ECMA).
+
+
+### Difference between Javascript and Java
+<ul>
+    <li>Java is an OOP programming language while Java Script is an OOP scripting language.</li>
+    <li>Java creates applications that run in a virtual machine or browser while JavaScript code is primarily on a browser only.</li>
+    <li>Java code needs to be compiled while JavaScript code are all in text.</li>
+    <li>They require different plug-ins.</li>
+</ul>
+
 ## References 
 <br/>
 <a href='https://dev.to/khaosdoctor/node-js-under-the-hood-1-getting-to-know-our-tools-1465'>Node.js Under The Hood #1 - Getting to know our tools<a>
