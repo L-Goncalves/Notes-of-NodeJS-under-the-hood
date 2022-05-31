@@ -110,6 +110,18 @@ In 1997 Javascript was growing really fast, it became clear that the language wo
     <li>They require different plug-ins.</li>
 </ul>
 
+
+### Node.JS is not 100% Javascript
+We can split Node.js into two parts: 
+<ul>
+   <li> V8 and Libuv. V8 is about 70% C++ and 30% JavaScript, while Libuv is almost completely written in C</li>
+</ul>
+
+### Exercises
+
+in the exercises folder you can check it.
+
+
 ## References 
 <br/>
 <a href='https://dev.to/khaosdoctor/node-js-under-the-hood-1-getting-to-know-our-tools-1465'>Node.js Under The Hood #1 - Getting to know our tools<a>
