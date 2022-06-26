@@ -1,4 +1,4 @@
-# NodeJS under the hood.
+# Notes of NodeJS under the hood.
 ## This is my trajectory in understanding NodeJS under the hood.
 
 Many people know how to use those tools nowadays but they don't understand how those tools work under the hood.
