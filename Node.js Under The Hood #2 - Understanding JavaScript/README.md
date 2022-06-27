@@ -20,6 +20,7 @@ This engine consists, mainly, in two components:
 which Lucas wrote another article about this.</li>
 </ul>
 
+### JavaScript Runtime
 The majority of APIs that developers use are coming from the engine itself, although some of them are not coming from that like the `setTimeout` or any DOM manipulation like `document` or even AJAX (the XMLHttpRequest object) but like, where do all of these APIs come from? We'll take our previous image and bring back to the reality:
 
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--eVmWSWwq--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/v8-real.png"/>
@@ -30,7 +31,29 @@ When we take a look at Javacrip from today we see a big part of that full of NPM
 
 Before ES6 and Node.js existed there were no consensus of how to implement those API's at the side of the browser. nowadays we have that.
 
-Furthermore, we have the event loop and the
+Furthermore, we have the event loop and the callback queue.
 
+
+### Callstack
+
+Most people think or have heard that JS is a single-threaded language and they just accepted it as the final truth in the universe without ever really knowing why. Being single-threaded means we only have a single call stack, in other words, we can only execute one thing at a time.
+
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--nTa40azM--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/call-stack.jpg"/>
+
+
+### What are Stacks?
+
+Stacks are basically a abstract data type that servers as a collection of elements. The name "Stack" comes from the analogy to a set of boxes stacked on top of each other, while it is easy to take a box off the top of the stack, taking last box off (from below) may require us to take another ones first.
+
+
+Stack has two main methods:
+<ul>
+<li><b>Push:</b> Adds another element to the collection</li>
+<li><b>Pop:</b> Removes the most recently added element that was not yet removed from the stack and returns its value</li>
+</ul>
+
+Thoughts on this: Maybe it's like an array(?)
+
+<b>The order of how the elements are pushed and popped really matters.</b> the order in which elements come off a stack are called LIFO (Last In First Out).
 
 To be continued.....
