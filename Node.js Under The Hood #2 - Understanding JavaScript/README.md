@@ -24,7 +24,13 @@ The majority of APIs that developers use are coming from the engine itself, alth
 
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--eVmWSWwq--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/v8-real.png"/>
 
-The engine is just a small part of Javascript does ...
+The engine is just a small part of what Javascript does, in Javascript there's some API's provided by the Web API's as well as external API's. Those API's (like `DOM`, `AJAX` & `setTimeout` are provided by the developers of the web browser or by the runtime itself like Node with differents API's.
+
+When we take a look at Javacrip from today we see a big part of that full of NPM packages and other stuff.
+
+Before ES6 and Node.js existed there were no consensus of how to implement those API's at the side of the browser. nowadays we have that.
+
+Furthermore, we have the event loop and the
 
 
 To be continued.....
