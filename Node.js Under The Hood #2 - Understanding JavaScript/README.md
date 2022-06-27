@@ -50,10 +50,13 @@ Stack has two main methods:
 <ul>
 <li><b>Push:</b> Adds another element to the collection</li>
 <li><b>Pop:</b> Removes the most recently added element that was not yet removed from the stack and returns its value</li>
+  <li><b>Peek:</b> Reads the most recent added item without removing it.</li>
 </ul>
 
 Thoughts on this: Maybe it's like an array(?)
 
 <b>The order of how the elements are pushed and popped really matters.</b> the order in which elements come off a stack are called LIFO (Last In First Out).
+
+
 
 To be continued.....
