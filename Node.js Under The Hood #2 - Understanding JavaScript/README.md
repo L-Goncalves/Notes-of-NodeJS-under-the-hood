@@ -46,7 +46,7 @@ Most people think or have heard that JS is a single-threaded language and they j
 Stacks are basically a abstract data type that servers as a collection of elements. The name "Stack" comes from the analogy to a set of boxes stacked on top of each other, while it is easy to take a box off the top of the stack, taking last box off (from below) may require us to take another ones first.
 
 
-Stack has two main methods:
+Stack has three main methods:
 <ul>
 <li><b>Push:</b> Adds another element to the collection</li>
 <li><b>Pop:</b> Removes the most recently added element that was not yet removed from the stack and returns its value</li>
@@ -57,6 +57,11 @@ Thoughts on this: Maybe it's like an array(?)
 
 <b>The order of how the elements are pushed and popped really matters.</b> the order in which elements come off a stack are called LIFO (Last In First Out).
 
+
+All we need to know about <b>Stacks</b> are these topics:
+<ul>
+  <li>New items (calls) are added to the top of the stack</li>
+</ul>
 
 
 To be continued.....
