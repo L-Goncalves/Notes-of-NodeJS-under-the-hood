@@ -94,7 +94,27 @@ When the engine runs the code, at first, the call stack will be empty. After eac
  <ul>
   <li>The step 0 is the empty stack which means the start of our program.</li>
     <br/>
-  <li>In the first step we add the first function call. The call to ````printSquare(5)```` since all other lines are just declaration</li>
+  <li>In the first step we add the first function call. The call to <b>printSquare(5)</b> since all other lines are just declarations</li>
+  <br/>
+  <li>In the second step we step into the printSquare function definition.
+    <div>
+    <ul>
+      <li> See how we call <b>const s = multiply(x,x)</b>, so let's add the <b>multiply to the top of the stack</b></li>
+      <br/>
+      <li>Later, we step into <b>multiply</b>, no function calls, nothing is added to the stack. We only evalute x * y and return it</li>
+      <br/>
+      <li>Retuning means the function is over and we pop it off the stack.</li>
+    <ul>
+      </div>
+  </li>
+  <br/>
+  
+  <li>In step 3 we no longer have the stac frame referencing <b>multiply(x,x).</b> So now let's go on to the line just after the last line we evaluated, it's the console.log line, then it's added and after it's over we can pop off the stack.</li>
+      <br/>
+      <li>In step 4 we now only have a single stack frame which is the first we added <b>printSquare(5)</b> since there's no other code after it we remove it from the stack</li>
+      <br/>
+      <li>Step 5 is equal to step 0, an empty stack.</li>
+    
  </ul>
  
  
