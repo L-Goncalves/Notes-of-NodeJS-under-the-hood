@@ -117,6 +117,11 @@ When the engine runs the code, at first, the call stack will be empty. After eac
     
  </ul>
  
+    
+ Important and nice to know:
+    
+ Stacks are exactly how stack traces are constructed when an exception is thrown.
+ A stack trace is basically the printed out state of the call stack when the exception happened.
  
  
  
