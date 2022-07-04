@@ -61,7 +61,44 @@ Thoughts on this: Maybe it's like an array(?)
 All we need to know about <b>Stacks</b> are these topics:
 <ul>
   <li>New items (calls) are added to the top of the stack</li>
+  <li>Removed items come off the top of the stack as well</li>
 </ul>
 
+Stacks and Javascript
+
+The stack records the position we are currently executing in our program. if we step into a function and call it we put that call on the top of the stack after we return from a function we pop the top of the stack.
+
+Each of these calls are called <b>Stack Frame</b>
+
+Let's take this first example:
+
+````javascript
+function multiply (x, y) {
+    return x * y
+}
+
+function printSquare (x) {
+    const s = multiply(x, x)
+    console.log(s)
+}
+
+printSquare(5)
+```` 
+
+When the engine runs the code, at first, the call stack will be empty. After each step, it'll be filling up with the following:
+
+ <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--9mCdpDuB--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/simple-callstack.png"/>
+ 
+ 
+ Let's take a look bit by bit:
+ <ul>
+  <li>The step 0 is the empty stack which means the start of our program.</li>
+    <br/>
+  <li>In the first step we add the first function call. The call to ````printSquare(5)```` since all other lines are just declaration</li>
+ </ul>
+ 
+ 
+ 
+ 
 
 To be continued.....
