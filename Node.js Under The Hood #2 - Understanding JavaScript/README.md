@@ -124,6 +124,65 @@ When the engine runs the code, at first, the call stack will be empty. After eac
  A stack trace is basically the printed out state of the call stack when the exception happened.
  
  
+ ````javascript 
  
+ function foo () {
+    throw new Error('Exception');
+}
 
-To be continued.....
+function bar () {
+    foo()
+}
+
+function start () {
+    bar()
+}
+
+start() 
+
+````
+
+This should print something like:
+
+````
+Uncaught Error: Exception foo.js:2
+    at foo (foo.js:2)
+    at bar (foo.js:6)
+    at start (foo.js:10)
+    at foo.js:13
+````
+
+The ``at`` phrases are just our call stack state.
+
+What is Stack overflow?
+
+This is one of the most common erros in programming. A stack overflow error happens when we reach maximum call stack size.
+
+Note: basically imagine the stack we saw previously explodes because there's no more space.
+
+Stacks are data structures, which means they're allocated in memory and memory is not infinite, so this can happen rather easily, specially on non-sanitized recursive functions like:
+
+````javascript
+
+function f () {
+  return f()
+}
+
+f()
+
+````
+
+At every call of f we'll pile up f in the stack, but, as we saw, we can never remove an item from the stack before it has reached the end of its execution, in other words, when the code reaches a point where no functions are called. So our stack would be blown because we have no termination condition:
+
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--_tydwAZx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/stack-overflow.png"/>
+
+Thankfully, the engine is watching us and realizes the function would never stop calling itself, causing an stack overflow, which is a pretty serious error, since it crashes the whole application. If not stopped, can crash or damage the stack memory for the whole runtime.
+
+
+### Single-threading pros and cons
+
+Running in a single-thread environment can be very liberating, since it's much simpler than running in a multi-threaded world where we'd have to care about racing conditions and deadlocks. In this world, such things do not exist, after all, we are only doing one thing at once.
+
+However, single-threading can also be very limiting. Since we have a single stack, what would happen if this stacked is blocked by some slow-running code?
+
+Lucas Santos talks about it in his article at <a href="https://dev.to/_staticvoid/node-js-under-the-hood-2-understanding-javascript-48cn">Node.js Under the Hood #3 by Lucas Santos<a>
