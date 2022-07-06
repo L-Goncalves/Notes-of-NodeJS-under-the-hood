@@ -53,3 +53,26 @@ libuv implements a full featured event loop, but also is the thing that is the h
 The biggest problem when it comes to async programming is that most people think that "later" is sometime close to between "now" and a milisecond after it. which is a lie.
   
   <h4>Everything in Javascript is scheduled to execute and finish at a later time, which doesn't necessarily happen stricly after the main thread, they're by definition going to complete when they complete</h4>
+
+
+For instance, let's take a simple AJAX call which calls an API:
+````javascript
+const response = call('http://api') // call() is some http request package, like fetch
+console.log(response)
+````
+
+Since AJAX calls are not completed right after they're called, it takes a while for the HTTP handshake to happen, to get data, download the data...
+So the `console` function would print `undefined`
+
+A simple way of "waiting" for the response to come are callbacks. Callbacks are, since the beginning of programming, an automatically called function that is passed on as a parameter to another function which will be executed and/or have its value returned after "now". So, basically, callbacks are a way of saying: "Hey, when you do have this value, call this callback". So let's improve our example:
+
+````javascript
+const response = call('http://api', (response) => {
+  console.log(response)
+})
+````
+
+This is basically stating that when the call is over, an anonymous function will be automatically called, since the call returns the response we would have it log on the response. (but only log because it does not use `return` within the function)
+
+## Inside the event loop
+
