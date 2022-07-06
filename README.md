@@ -17,7 +17,7 @@ This repository is entirely based on the understanding of that, I'll be reading 
 <br/>
 <a href='https://dev.to/_staticvoid/node-js-under-the-hood-3-deep-dive-into-the-event-loop-135d'>Node.js Under The Hood #3 - Deep dive into the event loop<a>
 <br/>
-<a href='https://dev.to/_staticvoid/node-js-under-the-hood-4-let-s-talk-about-v8-1eol'>Node.js Under The Hood 4 - Let's talk about V8<a>
+<a href='https://dev.to/_staticvoid/node-js-under-the-hood-4-let-s-talk-about-v8-1eol'>Node.js Under The Hood #4 - Let's talk about V8<a>
 <br/>
 <a href='https://dev.to/_staticvoid/node-js-under-the-hood-5-hidden-classes-variable-allocations-1244'>Node.js Under The Hood #5 - Hidden Classes & Variable Allocations<a>
 <br/>
