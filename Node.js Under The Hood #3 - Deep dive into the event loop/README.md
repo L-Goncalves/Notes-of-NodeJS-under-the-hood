@@ -35,3 +35,21 @@ libuv implements a full featured event loop, but also is the thing that is the h
 </ul>
 
 <h4>This is mainly why Node.js uses it, it's a full abstraction around several key parts of every OS, and it is necessary for the whole runtime to interact with it's surounding environment.<h4>
+
+## Event Loop
+  Now talking about other situation. In the browser, in pure Javascript what would happen if you had a long-running function in your call stack? Those kind of functions that take a while to finish, like a complex image processing or a long matrix transformation?
+  
+  In most languages you should not have any problem, since they are multi-threaded, but in single-threaded languages, this a very serious issue. Because while the call stack has functions to execute, the browser can't actually do anything else (Because it would be single-threaded).
+  
+ Another issue that might happen is that browsers are quit controlling, so if a tab takes too long to respond, they might take action by raising an error to ask you if you want to terminate that webpage or not. On the other hand complex tasks and long running code is what allow us to create great software so how can we conciliate those two without making the browser show us errors? Async callbacks, the base of what Node.js is.
+  
+  
+## Async callbacks
+  
+ Most Javascript applications works by loading a single `.js` file into memory and then all the magic happens after that entrypoint is executed. This can be divided into several build blocks, the "now" blocks, and the "later" blocks.
+  
+ Usually, only one of those is going to be the "now" block which means that it'll be the one to execute in the main thread (pushing calls to the call stack), and all the others will be executed later on.
+  
+The biggest problem when it comes to async programming is that most people think that "later" is sometime close to between "now" and a milisecond after it. which is a lie.
+  
+  <h4>Everything in Javascript is scheduled to execute and finish at a later time, which doesn't necessarily happen stricly after the main thread, they're by definition going to complete when they complete</h4>
