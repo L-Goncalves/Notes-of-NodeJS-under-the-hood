@@ -76,3 +76,6 @@ This is basically stating that when the call is over, an anonymous function will
 
 ## Inside the event loop
 
+Until ES6, Javascript actually never had any sort of consensus or notion asynchony built into the core itself, this means that JS would receive your order to execute some async code and send it to the engine, which would give JS a thumbs up and answer with "I'll see into it, someday". So there was no order neither logic on how the later would behave built into the engines.
+
+JS engines don't run isolated from everything else. They run inside what is called hosting environment. This environment can be whatever place JS is running into.
