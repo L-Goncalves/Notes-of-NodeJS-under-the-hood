@@ -79,3 +79,26 @@ This is basically stating that when the call is over, an anonymous function will
 Until ES6, Javascript actually never had any sort of consensus or notion asynchony built into the core itself, this means that JS would receive your order to execute some async code and send it to the engine, which would give JS a thumbs up and answer with "I'll see into it, someday". So there was no order neither logic on how the later would behave built into the engines.
 
 JS engines don't run isolated from everything else. They run inside what is called hosting environment. This environment can be whatever place JS is running into.
+
+<b>Note: they all have event loop</b>
+
+The event loop is what actually takes care of async code execution for the JS engines, at least of the scheduling part. It's the one who calls the engine and send commands to be executed, and also is the one who queues response callbacks which the engine returns to be called afterwards.
+
+JS engine is nothing more than on-deamnd execution environment, the event loop, is responsible for scheduling the JS code executions, which are called events.
+
+Now let's go back to our ``readFile`` code:
+````javascript 
+  
+  fs.readFile(filePath, function cb (err, data) => {
+      if (err) return reject(err)
+      return resolve(callback(data))
+    })
+````
+When we run it the readFile function is wrapped into a Promise object, but in essence this function is a callback function.
+
+````
+(err, data) => string
+````
+
+
+
