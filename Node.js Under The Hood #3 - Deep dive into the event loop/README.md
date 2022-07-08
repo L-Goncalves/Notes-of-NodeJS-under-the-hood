@@ -99,6 +99,7 @@ When we run it the readFile function is wrapped into a Promise object, but in es
 ````
 (err, data) => string
 ````
+This part is basically telling the engine to run a read operation on a file, the JS Engine then tells the hosting environment that it's going to suspend the execution of that bit of code for now, but, as soon as the environment (the event loop) has the response, it should schedule this anonymous callback function (the cb) to be executed as soon as possible. Then, the environment (in our case, it's Node.js) is set up to listen to this response from the file operation, when this response arrives, it schedules the cb function to be executed by inserting it into the event loop.
 
-
+<b>Note: need to explore more Event Loop to really get the idea</b>
 
