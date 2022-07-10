@@ -103,3 +103,7 @@ This part is basically telling the engine to run a read operation on a file, the
 
 <b>Note: need to explore more Event Loop to really get the idea</b>
 
+
+Let's remind of our old diagram:
+
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--eVmWSWwq--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/v8-real.png"/>
