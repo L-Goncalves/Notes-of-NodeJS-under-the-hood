@@ -107,3 +107,6 @@ This part is basically telling the engine to run a read operation on a file, the
 Let's remind of our old diagram:
 
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--eVmWSWwq--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/v8-real.png"/>
+
+
+Web APIs are, in essence, threads that we cannot access as developers, we can only make calls to them. Generally these are pieces that are built into the environment itself, for instance, in a browser environment, these would be APIs like document, XMLHttpRequest or setTimeout, which are mostly async functions. In Node.js these would be our C++ APIs we saw in the first part of the guide.
