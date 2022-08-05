@@ -110,3 +110,7 @@ Let's remind of our old diagram:
 
 
 Web APIs are, in essence, threads that we cannot access as developers, we can only make calls to them. Generally these are pieces that are built into the environment itself, for instance, in a browser environment, these would be APIs like document, XMLHttpRequest or setTimeout, which are mostly async functions. In Node.js these would be our C++ APIs we saw in the first part of the guide.
+  
+So, in plain words, whenever we call a function like setTimeout on Node.js, this call is sent to a different thread. All of this is controlled and provided by libuv, including the APIs we're using.
+
+Let's zoom into the event loop part:
