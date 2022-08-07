@@ -114,3 +114,5 @@ Web APIs are, in essence, threads that we cannot access as developers, we can on
 So, in plain words, whenever we call a function like setTimeout on Node.js, this call is sent to a different thread. All of this is controlled and provided by libuv, including the APIs we're using.
 
 Let's zoom into the event loop part:
+
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--LjaesHz8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/event-loop.png" />
