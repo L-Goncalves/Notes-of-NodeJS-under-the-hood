@@ -116,3 +116,20 @@ So, in plain words, whenever we call a function like setTimeout on Node.js, this
 Let's zoom into the event loop part:
 
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--LjaesHz8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/event-loop.png" />
+
+The events loop has a single task: Monitor the call stack and what is called in the callback queue, once the call stack is empty it'll take first event from the callback queue and push it into the call stack, which runs it. To this iteration, taking a callback from the queue and executing it into the call stack we give the name of ``tick``
+
+
+Let's look at event loop but in a simpler way (with code):
+
+```javascript 
+console.log('Node.js')
+setTimeout(function cb() { console.log(' awesome!') }, 5000)
+console.log(' is')
+```
+
+This should print "Node.js is awesome" in the console but how do this thing happen?
+
+1. Everything is empty, nothing is called
+
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--OydeTeFL--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/el-0.png"/>
