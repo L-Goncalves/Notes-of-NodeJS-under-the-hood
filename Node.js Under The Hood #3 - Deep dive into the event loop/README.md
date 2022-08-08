@@ -133,3 +133,5 @@ This should print "Node.js is awesome" in the console but how do this thing happ
 1. Everything is empty, nothing is called
 
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--OydeTeFL--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/el-0.png"/>
+  
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--xBxSN2X6--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/el-1.png"/>
