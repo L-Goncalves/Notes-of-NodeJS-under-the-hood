@@ -134,6 +134,33 @@ This should print "Node.js is awesome" in the console but how do this thing happ
 
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--OydeTeFL--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/el-0.png"/>
   
+2. ``console.log('Node.JS')`` is added to the call stack  
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--xBxSN2X6--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/el-1.png"/>
   
+3. ``console.log('Node.JS')`` is executed
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ZpppyT5---/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/el-2.png"/>
+
+  
+4. ``console.log('Node.JS')`` is removed from the stack
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ZpppyT5---/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/el-3.png"/>
+  
+  
+1. ``setTimeout`` is added to the call stack
+  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ZpppyT5---/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/el-4.png"/>
+  
+2. ``setTimeout`` is executed
+  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ZpppyT5---/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/el-5.png"/>
+  
+3. ``setTimeout`` is complete and removed from the call stack
+  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ZpppyT5---/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/el-6.png"/>
+  
+1. ``is`` is added to the call stack
+  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ZpppyT5---/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/el-7.png"/>
+  
+2. ``is`` is executed
+  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ZpppyT5---/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/el-8.png"/>
+  
+3. ``is`` is removed from the call stack
+  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ZpppyT5---/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/el-9.png"/>
+  
+  
